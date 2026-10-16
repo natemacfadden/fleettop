@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fleettop"
+version = "0.1.0"
+description = "Live CPU / RAM / disk / GPU graphs for a fleet of machines, over plain SSH"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = []
+keywords = ["monitoring", "gpu", "ssh", "tui", "nvtop", "cluster"]
+classifiers = [
+  "Environment :: Console :: Curses",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3",
+  "Topic :: System :: Monitoring",
+]
+
+[project.urls]
+Homepage = "https://github.com/natemacfadden/fleettop"
+
+[project.scripts]
+fleettop = "fleettop.cli:main"
+
+[tool.setuptools]
+packages = ["fleettop"]
+
+[tool.setuptools.package-data]
+fleettop = ["probe.sh"]
