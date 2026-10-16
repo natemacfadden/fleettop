@@ -35,6 +35,16 @@ fleettop -f hosts.txt        # or list them in a file, one per line
 fleettop                     # reads ~/.config/fleettop/hosts, else just this machine
 ```
 
+A hosts file, e.g. `~/.config/fleettop/hosts`:
+
+```
+# one host per line, anything ssh accepts
+localhost
+gpu01
+me@gpu02
+my-mac        # an alias from ~/.ssh/config
+```
+
 You need SSH keys set up so `ssh gpu01` logs in without a password.
 
 Keys: `v` bars/graphs, `l` line style, `+`/`-` time window, `s` save screen, `q` quit.
